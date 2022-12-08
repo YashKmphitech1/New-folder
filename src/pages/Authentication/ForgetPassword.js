@@ -24,7 +24,7 @@ const ForgetPasswordPage = props => {
   return (
     <React.Fragment>
       <MetaTags>
-        <title>Forget Password | Veltrix - Responsive Bootstrap 5 Admin Dashboard</title>
+        <title>Forget Password | Kmphitech - Responsive Bootstrap 5 Admin Dashboard</title>
       </MetaTags>
       <div className="home-btn d-none d-sm-block">
         <Link to="/" className="text-dark">
@@ -87,8 +87,8 @@ const ForgetPasswordPage = props => {
               <div className="mt-5 text-center">
                 <p>Remember It ? <Link to="login" className="fw-medium text-primary"> Sign In here </Link> </p>
                 <p>
-                  © {new Date().getFullYear()} Veltrix. Crafted with{" "}
-                  <i className="mdi mdi-heart text-danger" /> by Themesbrand
+                  © {new Date().getFullYear()} Kmphitech. All Rights Reserved{" "}
+                  <i className="mdi mdi-heart text-danger" /> by  
                 </p>
               </div>
             </Col>

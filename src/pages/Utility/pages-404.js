@@ -10,7 +10,7 @@ const Pages404 = () => {
   return (
     <React.Fragment>
       <MetaTags>
-        <title>404 Error Page | Veltrix - Responsive Bootstrap 5 Admin Dashboard</title>
+        <title>404 Error Page | Kmphitech - Responsive Bootstrap 5 Admin Dashboard</title>
       </MetaTags>
       <div className="authentication-bg d-flex align-items-center pb-0 vh-100">
         <div className="content-center w-100">

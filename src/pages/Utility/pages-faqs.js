@@ -28,11 +28,11 @@ const PagesFaqs = () => {
     <React.Fragment>
       <div className="page-content">
         <MetaTags>
-          <title>FAQs | Veltrix - Responsive Bootstrap 5 Admin Dashboard</title>
+          <title>FAQs | Kmphitech - Responsive Bootstrap 5 Admin Dashboard</title>
         </MetaTags>
         <Container fluid>
           {/* Render Breadcrumbs */}
-          <Breadcrumbs maintitle="Veltrix" title="Extra Pages" breadcrumbItem="FAQs" />
+          <Breadcrumbs maintitle="Kmphitech" title="Extra Pages" breadcrumbItem="FAQs" />
 
 
           <Row>

@@ -9,9 +9,6 @@ import Account from "./auth/register/reducer"
 import ForgetPassword from "./auth/forgetpwd/reducer"
 import Profile from "./auth/profile/reducer"
 
-//Calendar
-import calendar from "./calendar/reducer"
-
 const rootReducer = combineReducers({
   // public
   Layout,
@@ -19,7 +16,6 @@ const rootReducer = combineReducers({
   Account,
   ForgetPassword,
   Profile,
-  calendar,
 })
 
 export default rootReducer

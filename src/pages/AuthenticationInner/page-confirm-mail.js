@@ -12,7 +12,7 @@ const ConfirmMail = () => {
     <React.Fragment>
       <div className="account-pages my-5 pt-sm-5">
       <MetaTags>
-          <title>Confirm Mail | Veltrix - Responsive Bootstrap 5 Admin Dashboard</title>
+          <title>Confirm Mail | Kmphitech - Responsive Bootstrap 5 Admin Dashboard</title>
         </MetaTags>
         <Container>
           <Row>
@@ -66,8 +66,7 @@ const ConfirmMail = () => {
               </Card>
               <div className="mt-5 text-center">
                 <p>
-                  © {new Date().getFullYear()} Veltrix. Crafted with{" "}
-                  <i className="mdi mdi-heart text-danger"></i> by Themesbrand
+                  © {new Date().getFullYear()} Kmphitech LLP. All Rights Reserved{" "} 
                   </p>
               </div>
             </Col>

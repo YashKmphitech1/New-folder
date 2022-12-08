@@ -37,7 +37,7 @@ const PagesComingsoon = () => {
   return (
     <React.Fragment>
       <MetaTags>
-        <title>Coming Soon | Veltrix - Responsive Bootstrap 5 Admin Dashboard</title>
+        <title>Coming Soon | Kmphitech - Responsive Bootstrap 5 Admin Dashboard</title>
       </MetaTags>
       <div className="home-btn d-none d-sm-block">
         <Link to="/" className="text-dark">
@@ -51,7 +51,7 @@ const PagesComingsoon = () => {
               <Col lg={10}>
                 <div className="home-wrapper text-center">
                   <img src={logoDark} alt="logo" height="22" />
-                  <h3 className="mt-4">Let's get started with Veltrix</h3>
+                  <h3 className="mt-4">Let's get started with Kmphitech</h3>
                   <p className="mb-5">
                     It will be as simple as Occidental in fact it will be
                     Occidental.

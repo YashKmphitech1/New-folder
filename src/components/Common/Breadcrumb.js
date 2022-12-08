@@ -29,7 +29,7 @@ const Breadcrumb = props => {
           </ol>
         </div>
       </Col>
-      <Col sm={6}>
+      {/* <Col sm={6}>
         <div className="float-end d-none d-md-block">
           <Dropdown
             isOpen={setting_Menu}
@@ -49,7 +49,7 @@ const Breadcrumb = props => {
             </DropdownMenu>
           </Dropdown>
         </div>
-      </Col>
+      </Col> */}
     </Row>
   )
 }

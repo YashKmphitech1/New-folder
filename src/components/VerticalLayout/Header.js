@@ -164,7 +164,7 @@ const Header = props => {
               </DropdownMenu>
             </Dropdown>
 
-            <LanguageDropdown />
+            {/* <LanguageDropdown /> */}
 
             <div className="dropdown d-none d-lg-inline-block">
               <button
@@ -179,7 +179,7 @@ const Header = props => {
               </button>
             </div>
 
-            <NotificationDropdown />
+            {/* <NotificationDropdown /> */}
             <ProfileMenu />
 
             {/* <div

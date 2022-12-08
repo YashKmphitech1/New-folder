@@ -1,11 +1,12 @@
-import React from "react"
-import MetaTags from 'react-meta-tags';
+import React, { useEffect } from "react"
+import MetaTags from "react-meta-tags"
 import { MDBDataTable } from "mdbreact"
 import { Row, Col, Card, CardBody, CardTitle, CardSubtitle } from "reactstrap"
-
+import DataTable from "react-data-table-component"
 //Import Breadcrumb
 import Breadcrumbs from "../../components/Common/Breadcrumb"
 import "./datatables.scss"
+import { useState } from "react"
 
 const DatatableTables = () => {
   const data = {
@@ -507,46 +508,173 @@ const DatatableTables = () => {
     ],
   }
 
+  const acolumns = [
+    {
+      name: "Title",
+      selector: row => row.title,
+      sortable: true,
+    },
+    {
+      name: "FullName",
+      selector: row => row.name,
+      sortable: true,
+    },
+    {
+      name: "Year",
+      selector: row => row.year,
+      sortable: true,
+    },
+    {
+      name: "Action",
+      cell:(row)=> <>
+      <button className="action-btn btn btn-primary me-3"> <i class="fa-light fa-pen-to-square"></i>Edit</button>
+      <button className="action-btn btn btn-danger">Delete</button></>
+    },
+    
+  ]
+
+  const adata = [
+    {
+      id: 1,
+      title: "Beetlejuice",
+      year: "1988",
+      name: "Yash",
+    },
+    {
+      id: 2,
+      title: "Ghostbusters",
+      name: "Vasoya",
+      year: "1984",
+    },
+    {
+      id: 3,
+      title: "Ghostbusters",
+      name: "Vasoya",
+      year: "1984",
+    },
+    {
+      id: 4,
+      title: "Ghostbusters",
+      name: "Vasoya",
+      year: "1984",
+    },
+    {
+      id: 5,
+      title: "Ghostbusters",
+      name: "Vasoya",
+      year: "1984",
+    },
+    {
+      id: 6,
+      title: "Ghostbusters",
+      name: "Vasoya",
+      year: "1984",
+    },
+    {
+      id: 7,
+      title: "Ghostbusters",
+      name: "Vasoya",
+      year: "1984",
+    },
+    {
+      id: 8,
+      title: "Ghostbusters",
+      name: "Vasoya",
+      year: "1984",
+    },
+    {
+      id: 9,
+      title: "Ghostbusters",
+      name: "Vasoya",
+      year: "1984",
+    },
+    {
+      id: 10,
+      title: "Ghostbusters",
+      name: "Vasoya",
+      year: "1984",
+    },
+    {
+      id: 11,
+      title: "Ghostbusters",
+      name: "Vasoya",
+      year: "1984",
+    },
+    {
+      id: 12,
+      title: "Ghostbusters",
+      name: "Vasoya",
+      year: "1984",
+    },
+    {
+      id: 13,
+      title: "Ghostbusters",
+      name: "Vasoya",
+      year: "1984",
+    },
+    {
+      id: 14,
+      title: "Ghostbusters",
+      name: "Vasoya",
+      year: "1984",
+    },
+  ]
+
+  const [search, setSearch] = useState("")
+  const [filterData,setFilterData] =useState([])
+  function filtersData(data) {
+    const filterBy = data.filter(rows => {
+      return rows.name && rows.name.toLowerCase().match(search.toLowerCase())
+    })
+
+    return filterBy
+  }
+
+  useEffect(() => {
+    const filterdt = filtersData(adata);
+    setFilterData(filterdt);
+  }, [search])
+
   return (
     <React.Fragment>
       <div className="page-content">
         <MetaTags>
-          <title>Data Tables | Veltrix - Responsive Bootstrap 5 Admin Dashboard</title>
+          <title>
+            Data Tables | Kmphitech - Responsive Bootstrap 5 Admin Dashboard
+          </title>
         </MetaTags>
         <div className="container-fluid">
-          <Breadcrumbs maintitle="Veltrix" title="Tables" breadcrumbItem="Data Tables" />
+          <Breadcrumbs
+            maintitle="Kmphitech"
+            title="Tables"
+            breadcrumbItem="Data Tables"
+          />
 
           <Row>
             <Col className="col-12">
               <Card>
                 <CardBody>
-                  <CardTitle className="h4">Default Datatable </CardTitle>
-                  <p className="card-title-desc">
-                    mdbreact DataTables has most features enabled by default, so
-                    all you need to do to use it with your own tables is to call
-                    the construction function:{" "}
-                    <code>&lt;MDBDataTable /&gt;</code>.
-                  </p>
 
-                  <MDBDataTable responsive bordered data={data} />
-                </CardBody>
-              </Card>
-            </Col>
-          </Row>
-
-          <Row>
-            <Col className="col-12">
-              <Card>
-                <CardBody>
-                  <CardTitle className="h4">Stripped example </CardTitle>
-                  <p className="card-title-desc">
-                    mdbreact DataTables has most features enabled by default, so
-                    all you need to do to use it with your own tables is to call
-                    the construction function:{" "}
-                    <code>&lt;MDBDataTable striped /&gt;</code>.
-                  </p>
-
-                  <MDBDataTable responsive striped bordered data={data} />
+                  {/* <MDBDataTable responsive striped bordered data={data} /> */}
+                  {/* npm install react-data-table-component */}
+                  <DataTable
+                    columns={acolumns}
+                    data={filterData}
+                    selectableRows
+                    fixedHeader
+                    actions={
+                      <input
+                      className="form-control form-control-sm ml-0 my-1 w-50"
+                        type="search"
+                        placeholder="Search"
+                        value={search}
+                        onChange={e => setSearch(e.target.value)}
+                      />
+                    }
+                    fixedHeaderScrollHeight={"500px"}
+                    pagination
+                    striped
+                  />
                 </CardBody>
               </Card>
             </Col>

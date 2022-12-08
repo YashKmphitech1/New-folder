@@ -19,7 +19,7 @@ const Recoverpw = () => {
   return (
     <React.Fragment>
       <MetaTags>
-        <title>Recover Password | Veltrix - Responsive Bootstrap 5 Admin Dashboard</title>
+        <title>Recover Password | Kmphitech - Responsive Bootstrap 5 Admin Dashboard</title>
       </MetaTags>
       <div className="home-btn d-none d-sm-block">
         <Link to="dashboard" className="text-dark">
@@ -86,8 +86,7 @@ const Recoverpw = () => {
                   </Link>{" "}
                 </p>
                 <p className="mb-0">
-                  © {new Date().getFullYear()} Veltrix. Crafted with{" "}
-                  <i className="mdi mdi-heart text-danger"></i> by Themesbrand
+                  © {new Date().getFullYear()} Kmphitech LLP. All Rights Reserved{" "}
                   </p>
               </div>
             </Col>

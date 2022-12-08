@@ -29,7 +29,7 @@ const Register = props => {
   return (
     <React.Fragment>
       <MetaTags>
-        <title>Register | Veltrix - Responsive Bootstrap 5 Admin Dashboard</title>
+        <title>Register | Kmphitech - Responsive Bootstrap 5 Admin Dashboard</title>
       </MetaTags>
       <div className="home-btn d-none d-sm-block">
         <Link to="/" className="text-dark">
@@ -44,7 +44,7 @@ const Register = props => {
                 <div className="bg-primary">
                   <div className="text-primary text-center p-4">
                     <h5 className="text-white font-size-20">Free Register</h5>
-                    <p className="text-white-50">Get your free Veltrix account now.</p>
+                    <p className="text-white-50">Get your free Kmphitech account now.</p>
                     <a href="index.html" className="logo logo-admin">
                       <img src={logoSm} height="24" alt="logo" />
                     </a>
@@ -116,7 +116,7 @@ const Register = props => {
                       <div className="mt-2 mb-0 row">
                         <div className="col-12 mt-4">
                           <p className="mb-0">
-                            By registering you agree to the Veltrix{" "}
+                            By registering you agree to the Kmphitech{" "}
                             <Link to="#" className="text-primary">
                               Terms of Use
                             </Link>
@@ -136,8 +136,8 @@ const Register = props => {
                   </Link>{" "}
                 </p>
                 <p>
-                  © {new Date().getFullYear()} Veltrix. Crafted with{" "}
-                  <i className="mdi mdi-heart text-danger" /> by Themesbrand
+                  © {new Date().getFullYear()} Kmphitech. All Rights Reserved{" "}
+                  <i className="mdi mdi-heart text-danger" /> by  
                 </p>
               </div>
             </Col>

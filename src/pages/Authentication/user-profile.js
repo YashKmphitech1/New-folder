@@ -22,7 +22,7 @@ import { withRouter } from "react-router-dom"
 //Import Breadcrumb
 import Breadcrumb from "../../components/Common/Breadcrumb"
 
-import avatar from "../../assets/images/users/user-1.jpg"
+import avatar from "../../assets/images/users/avatar-1.jpg"
 // actions
 import { editProfile, resetProfileFlag } from "../../store/actions"
 
@@ -60,11 +60,11 @@ const UserProfile = props => {
     <React.Fragment>
       <div className="page-content">
         <MetaTags>
-          <title>Profile | Veltrix - Responsive Bootstrap 5 Admin Dashboard</title>
+          <title>Profile | Kmphitech - Responsive Bootstrap 5 Admin Dashboard</title>
         </MetaTags>
         <Container fluid>
           {/* Render Breadcrumb */}
-          <Breadcrumb title="Veltrix" breadcrumbItem="Profile" />
+          <Breadcrumb title="Kmphitech" breadcrumbItem="Profile" />
 
           <Row>
             <Col lg="12">

@@ -84,7 +84,20 @@ div.dataTables_scrollFoot > .dataTables_scrollFootInner > table {
   margin-top: 0 !important;
   border-top: none;
 }
+input.form-control{
+  max-width: 160px;
+width: 100%;
+}
+.sc-jrcTuL.jzkjuR{
+  background-color: #f8f9fa;
+}
+.btn.action-btn{
+  width: 68px;
+}
 @media screen and (max-width: 767px) {
+  .btn.action-btn{
+    width: 180px;
+  }
   div.dataTables_wrapper div.dataTables_length,
   div.dataTables_wrapper div.dataTables_filter,
   div.dataTables_wrapper div.dataTables_info,

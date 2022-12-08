@@ -65,22 +65,6 @@ const postJwtLogin = data => post(url.POST_FAKE_JWT_LOGIN, data)
 // postForgetPwd
 const postJwtForgetPwd = data => post(url.POST_FAKE_JWT_PASSWORD_FORGET, data)
 
-// get Events
-export const getEvents = () => get(url.GET_EVENTS)
-
-// add Events
-export const addNewEvent = event => post(url.ADD_NEW_EVENT, event)
-
-// update Event
-export const updateEvent = event => put(url.UPDATE_EVENT, event)
-
-// delete Event
-export const deleteEvent = event =>
-  del(url.DELETE_EVENT, { headers: { event } })
-
-// get Categories
-export const getCategories = () => get(url.GET_CATEGORIES)
-
 export {
   getLoggedInUser,
   isUserAuthenticated,

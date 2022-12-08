@@ -11,7 +11,7 @@ const PagesMaintenance = () => {
   return (
     <React.Fragment>
        <MetaTags>
-          <title>Maintenance | Veltrix - Responsive Bootstrap 5 Admin Dashboard</title>
+          <title>Maintenance | Kmphitech - Responsive Bootstrap 5 Admin Dashboard</title>
         </MetaTags>
         <div className="home-btn d-none d-sm-block">
             <Link to="/" className="text-dark">
@@ -38,58 +38,6 @@ const PagesMaintenance = () => {
                   <h3 className="mt-4">Site is Under Maintenance</h3>
                   <p>Please check back in sometime.</p>
 
-                  <Row>
-                    <Col md="4" className="text-center">
-                      <Card className="mt-4 maintenance-box">
-                        <CardBody>
-                          <i className="mdi mdi-airplane-takeoff h2"></i>
-                          <h6 className="text-uppercase mt-3">
-                            Why is the Site Down?
-                          </h6>
-                          <p className="text-muted mt-3">
-                            There are many variations of passages of Lorem Ipsum
-                            available, but the majority have suffered
-                            alteration.
-                          </p>
-                        </CardBody>
-                      </Card>
-                    </Col>
-                    <Col md="4" className="text-center">
-                      <Card className="mt-4 maintenance-box">
-                        <CardBody>
-                          <i className="mdi mdi-clock-alert h2"></i>
-                          <h6 className="text-uppercase mt-3">
-                            What is the Downtime?
-                          </h6>
-                          <p className="text-muted mt-3">
-                            Contrary to popular belief, Lorem Ipsum is not
-                            simply random text. It has roots in a piece of
-                            classNameical.
-                          </p>
-                        </CardBody>
-                      </Card>
-                    </Col>
-                    <Col md="4" className="text-center">
-                      <Card className="mt-4 maintenance-box">
-                        <CardBody>
-                          <i className="mdi mdi-email h2"></i>
-                          <h6 className="text-uppercase mt-3">
-                            Do you need Support?
-                          </h6>
-                          <p className="text-muted mt-3">
-                            If you are going to use a passage of Lorem Ipsum,
-                            you need to be sure there isn't anything embar..{" "}
-                            <Link
-                              to="mailto:no-reply@domain.com"
-                              className="text-decoration-underline"
-                            >
-                              no-reply@domain.com
-                            </Link>
-                          </p>
-                        </CardBody>
-                      </Card>
-                    </Col>
-                  </Row>
                 </div>
               </div>
             </Row>

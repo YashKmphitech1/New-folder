@@ -26,7 +26,7 @@ const Login = props => {
   return (
     <React.Fragment>
       <MetaTags>
-        <title>Login | Veltrix - Responsive Bootstrap 5 Admin Dashboard</title>
+        <title>Login | Kmphitech - Responsive Bootstrap 5 Admin Dashboard</title>
       </MetaTags>
       <div className="home-btn d-none d-sm-block">
         <Link to="/" className="text-dark">
@@ -44,7 +44,7 @@ const Login = props => {
                       Welcome Back !
                         </h5>
                     <p className="text-white-50">
-                      Sign in to continue to Veltrix.
+                      Sign in to continue to Kmphitech.
                         </p>
                     <Link to="/" className="logo logo-admin">
                       <img src={logoSm} height="24" alt="logo" />
@@ -68,7 +68,7 @@ const Login = props => {
                         <AvField
                           name="email"
                           label="Email"
-                          value="admin@themesbrand.com"
+                          value="admin@ .com"
                           className="form-control"
                           placeholder="Enter email"
                           type="email"
@@ -128,8 +128,8 @@ const Login = props => {
                   </Link>{" "}
                 </p>
                 <p>
-                  © {new Date().getFullYear()} Veltrix. Crafted with{" "}
-                  <i className="mdi mdi-heart text-danger" /> by Themesbrand
+                  © {new Date().getFullYear()} Kmphitech. All Rights Reserved{" "}
+                  <i className="mdi mdi-heart text-danger" /> by  
                 </p>
               </div>
             </Col>

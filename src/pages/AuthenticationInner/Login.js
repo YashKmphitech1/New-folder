@@ -15,7 +15,7 @@ const Login = () => {
   return (
     <React.Fragment>
       <MetaTags>
-        <title>Login | Veltrix - Responsive Bootstrap 5 Admin Dashboard</title>
+        <title>Login | Kmphitech - Responsive Bootstrap 5 Admin Dashboard</title>
       </MetaTags>
       <div className="home-btn d-none d-sm-block">
         <Link to="/" className="text-dark">
@@ -33,7 +33,7 @@ const Login = () => {
                       Welcome Back !
                         </h5>
                     <p className="text-white-50">
-                      Sign in to continue to Veltrix.
+                      Sign in to continue to Kmphitech.
                         </p>
                     <Link to="/" className="logo logo-admin">
                       <img src={logoSm} height="24" alt="logo" />
@@ -108,8 +108,7 @@ const Login = () => {
                   </Link>{" "}
                 </p>
                 <p className="mb-0">
-                  © {new Date().getFullYear()} Veltrix. Crafted with{" "}
-                  <i className="mdi mdi-heart text-danger"></i> by Themesbrand
+                  © {new Date().getFullYear()} Kmphitech LLP. All Rights Reserved{" "}
                   </p>
               </div>
             </Col>
