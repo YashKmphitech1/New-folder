@@ -28,7 +28,7 @@ const Dashboard = props => {
     <React.Fragment>
       <div className="page-content">
         <MetaTags>
-          <title>Dashboard | Kmphitech - Responsive Bootstrap 5 Admin Dashboard</title>
+          <title>Dashboard | Kmphitech - Admin Dashboard</title>
         </MetaTags>
         <Container fluid>
           <div className="page-title-box">

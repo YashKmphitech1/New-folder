@@ -7,14 +7,13 @@ import { Form, Dropdown, DropdownMenu, DropdownItem, DropdownToggle, Input, Butt
 import { Link } from "react-router-dom"
 
 // Import menuDropdown
-import LanguageDropdown from "../CommonForBoth/TopbarDropdown/LanguageDropdown"
-import NotificationDropdown from "../CommonForBoth/TopbarDropdown/NotificationDropdown"
-import ProfileMenu from "../CommonForBoth/TopbarDropdown/ProfileMenu"
+import LanguageDropdown from "../TopbarDropdown/LanguageDropdown"
+import NotificationDropdown from "../TopbarDropdown/NotificationDropdown"
+import ProfileMenu from "../TopbarDropdown/ProfileMenu"
 
 import logodarkImg from "../../assets/images/logo-dark.png";
 import logosmImg from "../../assets/images/logo-sm.png";
 import logolightImg from "../../assets/images/logo-light.png";
-
 
 //i18n
 import { withTranslation } from "react-i18next"

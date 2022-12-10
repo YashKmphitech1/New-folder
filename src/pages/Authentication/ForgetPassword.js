@@ -3,28 +3,20 @@ import MetaTags from 'react-meta-tags';
 import React from "react"
 import { Row, Col, Alert, Card, CardBody, Container } from "reactstrap"
 
-// Redux
-import { connect } from "react-redux"
-import { withRouter, Link } from "react-router-dom"
-
-// availity-reactstrap-validation
-import { AvForm, AvField } from "availity-reactstrap-validation"
-
-// action
-import { userForgetPassword } from "../../store/actions"
+import { Link } from "react-router-dom"
 
 // import images
 import logoSm from "../../assets/images/logo-sm.png";
 
 const ForgetPasswordPage = props => {
   function handleValidSubmit(event, values) {
-    props.userForgetPassword(values, props.history)
+    //
   }
 
   return (
     <React.Fragment>
       <MetaTags>
-        <title>Forget Password | Kmphitech - Responsive Bootstrap 5 Admin Dashboard</title>
+        <title>Forget Password | Kmphitech - Admin Dashboard</title>
       </MetaTags>
       <div className="home-btn d-none d-sm-block">
         <Link to="/" className="text-dark">
@@ -57,12 +49,12 @@ const ForgetPasswordPage = props => {
                     </Alert>
                   ) : null}
 
-                  <AvForm
+                  <form
                     className="form-horizontal mt-4"
-                    onValidSubmit={(e, v) => handleValidSubmit(e, v)}
+                    onSubmit={handleValidSubmit}
                   >
                     <div className="mb-3">
-                      <AvField
+                      <input
                         name="email"
                         label="Email"
                         className="form-control"
@@ -81,7 +73,7 @@ const ForgetPasswordPage = props => {
                           </button>
                       </Col>
                     </Row>
-                  </AvForm>
+                  </form>
                 </CardBody>
               </Card>
               <div className="mt-5 text-center">
@@ -99,18 +91,4 @@ const ForgetPasswordPage = props => {
   )
 }
 
-ForgetPasswordPage.propTypes = {
-  forgetError: PropTypes.any,
-  forgetSuccessMsg: PropTypes.any,
-  history: PropTypes.object,
-  userForgetPassword: PropTypes.func
-}
-
-const mapStatetoProps = state => {
-  const { forgetError, forgetSuccessMsg } = state.ForgetPassword
-  return { forgetError, forgetSuccessMsg }
-}
-
-export default withRouter(
-  connect(mapStatetoProps, { userForgetPassword })(ForgetPasswordPage)
-)
+export default ForgetPasswordPage

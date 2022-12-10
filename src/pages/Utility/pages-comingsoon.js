@@ -37,7 +37,7 @@ const PagesComingsoon = () => {
   return (
     <React.Fragment>
       <MetaTags>
-        <title>Coming Soon | Kmphitech - Responsive Bootstrap 5 Admin Dashboard</title>
+        <title>Coming Soon | Kmphitech - Admin Dashboard</title>
       </MetaTags>
       <div className="home-btn d-none d-sm-block">
         <Link to="/" className="text-dark">

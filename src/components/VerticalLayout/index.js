@@ -36,7 +36,7 @@ class Layout extends Component {
     // let currentage = this.capitalizeFirstLetter(this.props.location.pathname)
 
     // document.title =
-    //   currentage + " | Kmphitech - Responsive Bootstrap 5 Admin Dashboard"
+    //   currentage + " | Kmphitech - Admin Dashboard"
     if (this.props.leftSideBarTheme) {
       this.props.changeSidebarTheme(this.props.leftSideBarTheme)
     }

@@ -10,7 +10,7 @@ const Pages500 = () => {
   return (
     <React.Fragment>
       <MetaTags>
-        <title>500 Error Page | Kmphitech - Responsive Bootstrap 5 Admin Dashboard</title>
+        <title>500 Error Page | Kmphitech - Admin Dashboard</title>
       </MetaTags>
       <div className="authentication-bg d-flex align-items-center pb-0 vh-100">
         <div className="content-center w-100">

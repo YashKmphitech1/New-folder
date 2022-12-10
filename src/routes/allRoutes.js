@@ -44,10 +44,10 @@ const userRoutes = [
 ]
 
 const authRoutes = [
-  { path: "/logout", component: Logout },
+  // { path: "/logout", component: Logout },
   { path: "/login", component: Login },
-  { path: "/forgot-password", component: ForgetPwd },
-  { path: "/register", component: Register },
+  // { path: "/forgot-password", component: ForgetPwd },
+  // { path: "/register", component: Register },
 
   { path: "/pages-maintenance", component: PagesMaintenance },
   { path: "/pages-comingsoon", component: PagesComingsoon },
@@ -56,9 +56,9 @@ const authRoutes = [
 
   // Authentication Inner
   { path: "/pages-login", component: Login1 },
-  { path: "/pages-register", component: Register1 },
-  { path: "/page-recoverpw", component: Recoverpw },
-  { path: "/pages-forgot-pwd", component: ForgetPwd1 },
+  // { path: "/pages-register", component: Register1 },
+  // { path: "/page-recoverpw", component: Recoverpw },
+  // { path: "/pages-forgot-pwd", component: ForgetPwd1 },
 ]
 
 export { userRoutes, authRoutes }

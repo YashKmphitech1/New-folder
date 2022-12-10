@@ -1,28 +1,32 @@
-import React from "react"
 import MetaTags from 'react-meta-tags';
-// Redux
-import { Link } from "react-router-dom"
+import React from "react"
 
-import { Row, Col, CardBody, Card, Container } from "reactstrap"
+import { Row, Col, CardBody, Card, Alert, Container } from "reactstrap"
 
-// availity-reactstrap-validation
-import { AvForm, AvField } from "availity-reactstrap-validation"
+import {  Link, useHistory } from "react-router-dom"
 
 // import images
 import logoSm from "../../assets/images/logo-sm.png";
 
-const Login = () => {
+const Login = props => {
+  const history=useHistory()
+  // handleValidSubmit
+  const handleValidSubmit = () => {
+    history.push("/dashboard");
+    localStorage.setItem("authUser",true);
+  }
+
   return (
     <React.Fragment>
       <MetaTags>
-        <title>Login | Kmphitech - Responsive Bootstrap 5 Admin Dashboard</title>
+        <title>Login | Kmphitech - Admin Dashboard</title>
       </MetaTags>
       <div className="home-btn d-none d-sm-block">
         <Link to="/" className="text-dark">
-          <i className="fas fa-home h2"></i>
+          <i className="fas fa-home h2" />
         </Link>
       </div>
-      <div className="account-pages my-5 pt-5">
+      <div className="account-pages my-5 pt-sm-5">
         <Container>
           <Row className="justify-content-center">
             <Col md={8} lg={6} xl={4}>
@@ -43,26 +47,33 @@ const Login = () => {
 
                 <CardBody className="p-4">
                   <div className="p-3">
-                    <AvForm className="form-horizontal mt-4">
+                    <form
+                      className="form-horizontal mt-4"
+                      onSubmit={handleValidSubmit}
+                    >
+                      {props.error && typeof props.error === "string" ? (
+                        <Alert color="danger">{props.error}</Alert>
+                      ) : null}
+
                       <div className="mb-3">
-                        <AvField
-                          name="username"
-                          label="Username"
-                          value=""
+                        <input
+                          name="email"
+                          label="Email"
                           className="form-control"
-                          placeholder="Enter username"
-                          type="text"
+                          placeholder="Enter email"
+                          type="email"
                           required
                         />
                       </div>
+
                       <div className="mb-3">
-                        <AvField
+                        <input
                           name="password"
                           label="Password"
-                          value=""
+                          className="form-control"
                           type="password"
                           required
-                          placeholder="Enter password"
+                          placeholder="Enter Password"
                         />
                       </div>
 
@@ -90,26 +101,26 @@ const Login = () => {
                               </Link>
                         </div>
                       </Row>
-
-                    </AvForm>
+                      
+                    </form>
                   </div>
                 </CardBody>
               </Card>
-
               <div className="mt-5 text-center">
                 <p>
-                  Don't have an account ?{" "}
+                  Don&#39;t have an account ?{" "}
                   <Link
-                    to="pages-register"
+                    to="register"
                     className="fw-medium text-primary"
                   >
                     {" "}
-                      Signup now{" "}
+                    Signup now{" "}
                   </Link>{" "}
                 </p>
-                <p className="mb-0">
-                  © {new Date().getFullYear()} Kmphitech LLP. All Rights Reserved{" "}
-                  </p>
+                <p>
+                  © {new Date().getFullYear()} Kmphitech. All Rights Reserved{" "}
+                  <i className="mdi mdi-heart text-danger" /> by  
+                </p>
               </div>
             </Col>
           </Row>
@@ -118,5 +129,6 @@ const Login = () => {
     </React.Fragment>
   )
 }
+
 
 export default Login

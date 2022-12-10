@@ -1,4 +1,4 @@
-import { PROFILE_ERROR, PROFILE_SUCCESS, EDIT_PROFILE, RESET_PROFILE_FLAG } from "./actionTypes"
+import { PROFILE_ERROR, PROFILE_SUCCESS, EDIT_PROFILE } from "./actionTypes"
 
 export const editProfile = user => {
   return {
@@ -21,8 +21,3 @@ export const profileError = error => {
   }
 }
 
-export const resetProfileFlag = error => {
-  return {
-    type: RESET_PROFILE_FLAG,
-  }
-}

@@ -527,7 +527,7 @@ const DatatableTables = () => {
     {
       name: "Action",
       cell:(row)=> <>
-      <button className="action-btn btn btn-primary me-3"> <i class="fa-light fa-pen-to-square"></i>Edit</button>
+      <button className="action-btn btn btn-primary me-3"> <i className="fa-light fa-pen-to-square"></i>Edit</button>
       <button className="action-btn btn btn-danger">Delete</button></>
     },
     
@@ -640,7 +640,7 @@ const DatatableTables = () => {
       <div className="page-content">
         <MetaTags>
           <title>
-            Data Tables | Kmphitech - Responsive Bootstrap 5 Admin Dashboard
+            Data Tables | Kmphitech - Admin Dashboard
           </title>
         </MetaTags>
         <div className="container-fluid">

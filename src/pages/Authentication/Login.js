@@ -1,32 +1,25 @@
-import PropTypes from 'prop-types'
 import MetaTags from 'react-meta-tags';
 import React from "react"
 
 import { Row, Col, CardBody, Card, Alert, Container } from "reactstrap"
 
-// Redux
-import { connect } from "react-redux"
-import { withRouter, Link } from "react-router-dom"
-
-// availity-reactstrap-validation
-import { AvForm, AvField } from "availity-reactstrap-validation"
-
-// actions
-import { loginUser, apiError } from "../../store/actions"
+import {  Link, useHistory } from "react-router-dom"
 
 // import images
 import logoSm from "../../assets/images/logo-sm.png";
 
 const Login = props => {
+  const history=useHistory()
   // handleValidSubmit
-  const handleValidSubmit = (event, values) => {
-    props.loginUser(values, props.history)
+  const handleValidSubmit = () => {
+    history.push("/dashboard");
+    localStorage.setItem("authUser",true);
   }
 
   return (
     <React.Fragment>
       <MetaTags>
-        <title>Login | Kmphitech - Responsive Bootstrap 5 Admin Dashboard</title>
+        <title>Login | Kmphitech - Admin Dashboard</title>
       </MetaTags>
       <div className="home-btn d-none d-sm-block">
         <Link to="/" className="text-dark">
@@ -54,21 +47,18 @@ const Login = props => {
 
                 <CardBody className="p-4">
                   <div className="p-3">
-                    <AvForm
+                    <form
                       className="form-horizontal mt-4"
-                      onValidSubmit={(e, v) => {
-                        handleValidSubmit(e, v)
-                      }}
+                      onSubmit={handleValidSubmit}
                     >
                       {props.error && typeof props.error === "string" ? (
                         <Alert color="danger">{props.error}</Alert>
                       ) : null}
 
                       <div className="mb-3">
-                        <AvField
+                        <input
                           name="email"
                           label="Email"
-                          value="admin@ .com"
                           className="form-control"
                           placeholder="Enter email"
                           type="email"
@@ -77,10 +67,10 @@ const Login = props => {
                       </div>
 
                       <div className="mb-3">
-                        <AvField
+                        <input
                           name="password"
                           label="Password"
-                          value="123456"
+                          className="form-control"
                           type="password"
                           required
                           placeholder="Enter Password"
@@ -112,7 +102,7 @@ const Login = props => {
                         </div>
                       </Row>
                       
-                    </AvForm>
+                    </form>
                   </div>
                 </CardBody>
               </Card>
@@ -140,17 +130,5 @@ const Login = props => {
   )
 }
 
-const mapStateToProps = state => {
-  const { error } = state.Login
-  return { error }
-}
 
-export default withRouter(
-  connect(mapStateToProps, { loginUser, apiError })(Login)
-)
-
-Login.propTypes = {
-  error: PropTypes.any,
-  history: PropTypes.object,
-  loginUser: PropTypes.func,
-}
+export default Login

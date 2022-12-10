@@ -1,17 +1,23 @@
+import PropTypes from 'prop-types'
+import MetaTags from 'react-meta-tags';
 import React from "react"
-import { Row, Col, CardBody, Card, Container } from "reactstrap"
+import { Row, Col, Alert, Card, CardBody, Container } from "reactstrap"
 
 import { Link } from "react-router-dom"
-
-// availity-reactstrap-validation
-import { AvForm, AvField } from "availity-reactstrap-validation"
 
 // import images
 import logoSm from "../../assets/images/logo-sm.png";
 
-const ForgetPasswordPage = () => {
+const ForgetPasswordPage = props => {
+  function handleValidSubmit(event, values) {
+    //
+  }
+
   return (
     <React.Fragment>
+      <MetaTags>
+        <title>Forget Password | Kmphitech - Admin Dashboard</title>
+      </MetaTags>
       <div className="home-btn d-none d-sm-block">
         <Link to="/" className="text-dark">
           <i className="fas fa-home h2"></i>
@@ -31,13 +37,24 @@ const ForgetPasswordPage = () => {
                   </div>
                 </div>
                 <CardBody className="p-4">
-                  <div className="alert alert-success mt-5" role="alert" className="mt-5">
-                    Enter your Email and instructions will be sent to you!
-                  </div>
 
-                  <AvForm className="form-horizontal mt-4">
+                  {props.forgetError && props.forgetError ? (
+                    <Alert color="danger" style={{ marginTop: "13px" }} className="mt-5">
+                      {props.forgetError}
+                    </Alert>
+                  ) : null}
+                  {props.forgetSuccessMsg ? (
+                    <Alert color="success" style={{ marginTop: "13px" }} className="mt-5">
+                      {props.forgetSuccessMsg}
+                    </Alert>
+                  ) : null}
+
+                  <form
+                    className="form-horizontal mt-4"
+                    onSubmit={handleValidSubmit}
+                  >
                     <div className="mb-3">
-                      <AvField
+                      <input
                         name="email"
                         label="Email"
                         className="form-control"
@@ -56,11 +73,11 @@ const ForgetPasswordPage = () => {
                           </button>
                       </Col>
                     </Row>
-                  </AvForm>
+                  </form>
                 </CardBody>
               </Card>
               <div className="mt-5 text-center">
-                <p>Remember It ? <Link  to="pages-login" className="fw-medium text-primary"> Sign In here </Link> </p>
+                <p>Remember It ? <Link to="login" className="fw-medium text-primary"> Sign In here </Link> </p>
                 <p>
                   © {new Date().getFullYear()} Kmphitech. All Rights Reserved{" "}
                   <i className="mdi mdi-heart text-danger" /> by  

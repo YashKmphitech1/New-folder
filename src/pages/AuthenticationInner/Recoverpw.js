@@ -19,7 +19,7 @@ const Recoverpw = () => {
   return (
     <React.Fragment>
       <MetaTags>
-        <title>Recover Password | Kmphitech - Responsive Bootstrap 5 Admin Dashboard</title>
+        <title>Recover Password | Kmphitech - Admin Dashboard</title>
       </MetaTags>
       <div className="home-btn d-none d-sm-block">
         <Link to="dashboard" className="text-dark">

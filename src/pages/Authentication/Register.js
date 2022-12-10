@@ -3,14 +3,6 @@ import React, { useEffect } from "react"
 import MetaTags from 'react-meta-tags';
 import { Row, Col, CardBody, Card, Alert, Container } from "reactstrap"
 
-// availity-reactstrap-validation
-import { AvForm, AvField } from "availity-reactstrap-validation"
-
-// action
-import { registerUser, apiError, registerUserFailed } from "../../store/actions"
-
-// Redux
-import { connect } from "react-redux"
 import { Link } from "react-router-dom"
 
 // import images
@@ -19,7 +11,7 @@ import logoSm from "../../assets/images/logo-sm.png";
 const Register = props => {
   // handleValidSubmit
   const handleValidSubmit = (event, values) => {
-    props.registerUser(values)
+    //
   }
 
   useEffect(() => {
@@ -29,7 +21,7 @@ const Register = props => {
   return (
     <React.Fragment>
       <MetaTags>
-        <title>Register | Kmphitech - Responsive Bootstrap 5 Admin Dashboard</title>
+        <title>Register | Kmphitech - Admin Dashboard</title>
       </MetaTags>
       <div className="home-btn d-none d-sm-block">
         <Link to="/" className="text-dark">
@@ -52,11 +44,9 @@ const Register = props => {
                 </div>
                 <CardBody className="p-4">
                   <div className="p-3">
-                    <AvForm
+                    <form
                       className="mt-4"
-                      onValidSubmit={(e, v) => {
-                        handleValidSubmit(e, v)
-                      }}
+                      onSubmit={ handleValidSubmit}
                     >
                       {props.user && props.user ? (
                         <Alert color="success">
@@ -72,7 +62,7 @@ const Register = props => {
                         ) : null}
 
                       <div className="mb-3">
-                        <AvField
+                        <input
                           id="email"
                           name="email"
                           label="Email"
@@ -84,7 +74,7 @@ const Register = props => {
                       </div>
 
                       <div className="mb-3">
-                        <AvField
+                        <input
                           name="username"
                           label="Username"
                           type="text"
@@ -93,7 +83,7 @@ const Register = props => {
                         />
                       </div>
                       <div className="mb-3">
-                        <AvField
+                        <input
                           name="password"
                           label="Password"
                           type="password"
@@ -123,7 +113,7 @@ const Register = props => {
                           </p>
                         </div>
                       </div>
-                    </AvForm>
+                    </form>
                   </div>
                 </CardBody>
               </Card>
@@ -148,20 +138,4 @@ const Register = props => {
   )
 }
 
-Register.propTypes = {
-  registerUser: PropTypes.func,
-  registerUserFailed: PropTypes.func,
-  registrationError: PropTypes.any,
-  user: PropTypes.any,
-}
-
-const mapStatetoProps = state => {
-  const { user, registrationError, loading } = state.Account
-  return { user, registrationError, loading }
-}
-
-export default connect(mapStatetoProps, {
-  registerUser,
-  apiError,
-  registerUserFailed,
-})(Register)
+export default Register

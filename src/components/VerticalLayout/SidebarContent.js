@@ -113,7 +113,7 @@ const SidebarContent = props => {
               </ul>
             </li>
             
-            <li>
+            {/* <li>
               <Link to="/#" className="has-arrow waves-effect">
                 <i className="ti-archive"></i>
                 <span>{props.t("Authentication")}</span>
@@ -130,9 +130,6 @@ const SidebarContent = props => {
                   <Link to="/page-recoverpw">
                     {props.t("Recover Password")}
                   </Link>
-                </li>
-                <li>
-                  <Link to="/auth-lock-screen">{props.t("Lock screen")}</Link>
                 </li>
                 
               </ul>
@@ -161,7 +158,7 @@ const SidebarContent = props => {
                   <Link to="pages-faqs">{props.t("FAQs")}</Link>
                 </li>
               </ul>
-            </li>
+            </li> */}
 
           </ul>
         </div>

@@ -1,19 +1,27 @@
-import React from "react"
-// availity-reactstrap-validation
+import PropTypes from "prop-types"
+import React, { useEffect } from "react"
 import MetaTags from 'react-meta-tags';
-import { AvForm, AvField } from "availity-reactstrap-validation"
-import { Link } from "react-router-dom"
+import { Row, Col, CardBody, Card, Alert, Container } from "reactstrap"
 
-import { Row, Col, CardBody, Card, Container } from "reactstrap"
+import { Link } from "react-router-dom"
 
 // import images
 import logoSm from "../../assets/images/logo-sm.png";
 
-const Register = () => {
+const Register = props => {
+  // handleValidSubmit
+  const handleValidSubmit = (event, values) => {
+    //
+  }
+
+  useEffect(() => {
+    props.apiError("")
+  }, []);
+
   return (
     <React.Fragment>
       <MetaTags>
-        <title>Register | Kmphitech - Responsive Bootstrap 5 Admin Dashboard</title>
+        <title>Register | Kmphitech - Admin Dashboard</title>
       </MetaTags>
       <div className="home-btn d-none d-sm-block">
         <Link to="/" className="text-dark">
@@ -23,7 +31,7 @@ const Register = () => {
       <div className="account-pages my-5 pt-sm-5">
         <Container>
           <Row className="justify-content-center">
-            <Col md={8} lg={8} xl={4}>
+            <Col md={8} lg={6} xl={4}>
               <Card className="overflow-hidden">
                 <div className="bg-primary">
                   <div className="text-primary text-center p-4">
@@ -36,9 +44,26 @@ const Register = () => {
                 </div>
                 <CardBody className="p-4">
                   <div className="p-3">
-                    <AvForm className="mt-4">
+                    <form
+                      className="mt-4"
+                      onSubmit={ handleValidSubmit}
+                    >
+                      {props.user && props.user ? (
+                        <Alert color="success">
+                          Register User Successfully
+                        </Alert>
+                      ) : null}
+
+                      {props.registrationError &&
+                        props.registrationError ? (
+                          <Alert color="danger">
+                            {props.registrationError}
+                          </Alert>
+                        ) : null}
+
                       <div className="mb-3">
-                        <AvField
+                        <input
+                          id="email"
                           name="email"
                           label="Email"
                           className="form-control"
@@ -49,7 +74,7 @@ const Register = () => {
                       </div>
 
                       <div className="mb-3">
-                        <AvField
+                        <input
                           name="username"
                           label="Username"
                           type="text"
@@ -58,12 +83,12 @@ const Register = () => {
                         />
                       </div>
                       <div className="mb-3">
-                        <AvField
+                        <input
                           name="password"
                           label="Password"
                           type="password"
                           required
-                          placeholder="Enter password"
+                          placeholder="Enter Password"
                         />
                       </div>
 
@@ -88,25 +113,22 @@ const Register = () => {
                           </p>
                         </div>
                       </div>
-                    </AvForm>
+                    </form>
                   </div>
                 </CardBody>
               </Card>
               <div className="mt-5 text-center">
                 <p>
                   Already have an account ?{" "}
-                  <Link
-                    to="/pages-login"
-                    className="fw-medium text-primary"
-                  >
+                  <Link to="/login" className="fw-medium text-primary">
                     {" "}
-                      Login
-                    </Link>{" "}
+                    Login
+                  </Link>{" "}
                 </p>
                 <p>
                   © {new Date().getFullYear()} Kmphitech. All Rights Reserved{" "}
                   <i className="mdi mdi-heart text-danger" /> by  
-                  </p>
+                </p>
               </div>
             </Col>
           </Row>
